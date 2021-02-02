@@ -21,3 +21,5 @@ Code:
 The code contains 2 files:
 1. Salary_Prediction.py: This is a python file which takes experience as input and predicts the expected salary of the employee.
 2. Salary_Prediction.ipynb: This is a jupyter notebook file and you'll need either Jupyter notebook or Google Colab to run this file. It will predict the salary for the candidate with 4.3 years of experience and along with that it will also plot the graph of experience vs salaries.
+
+NOTE: I won't say that the predictions are 100% accurate, it depends on user to user but I found the predictions 90% accurate.
