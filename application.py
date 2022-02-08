@@ -7,7 +7,8 @@ import streamlit as st
 from predict import predict_salary
 
 import warnings
-warnings.filterwarnings("ignore")
+
+warnings.filterwarnings('ignore')
 
 
 @st.cache
@@ -16,13 +17,14 @@ def getPredictedSalary(exp):
     return response
 
 
-st.title("Salary Prediction")
-st.write("A simple program to perform salary prediction based on the data present")
+st.title('Salary Prediction')
+st.write('A simple program to perform salary prediction based on the data_preparation present')
 
-form = st.form(key="salary-prediction-form")
-experience = form.text_input("Enter number of years of experience between 1-20 to predict expected salary: ")
-predict = form.form_submit_button(label="Predict")
+form = st.form(key='salary-prediction-form')
+experience = form.slider(label='Years of Experience', min_value=0, max_value=20)
+predict = form.form_submit_button(label='Predict')
 
 if predict:
     result = getPredictedSalary(experience)
-    st.write("The expected salary is: ", "{:.2f}".format(result))
+    expected_salary = "{:.2f}".format(result)
+    st.write('The expected salary for {} year(s) of experience must be {}'.format(experience, expected_salary))

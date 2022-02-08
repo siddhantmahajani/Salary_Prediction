@@ -8,11 +8,11 @@ from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures
 
 import warnings
-warnings.filterwarnings("ignore")
+warnings.filterwarnings('ignore')
 
 
 def predict(experience):
-    dataset = pd.read_csv("data/data.csv")
+    dataset = pd.read_csv('data/data.csv')
     x = dataset.iloc[:, :-1].values
     y = dataset.iloc[:, -1].values
 
